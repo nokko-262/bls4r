@@ -1,0 +1,287 @@
+<html><head><base href="https://BlackStar.Shop/"><link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
+<title>Bl4CKSTAR ★ SHOP</title>
+<style>
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000;
+  color: #290091;
+  overflow: hidden;
+}
+
+#boot-sequence {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: #290091;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+#main-text {
+  font-size: 24px;
+  text-align: left;
+  margin-bottom: 20px;
+  color: #7254ff;
+}
+
+#boot-text {
+  font-size: 16px;
+  text-align: left;
+  white-space: pre-wrap;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+#main-content {
+  display: none;
+  height: 100vh;
+  background: linear-gradient(135deg, #000033 0%, #000011 100%);
+  color: #290091;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.window {
+  border: 1px solid #4400aa;
+  background: linear-gradient(to bottom, #000022 0%, #000011 100%);
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(68, 0, 170, 0.5);
+}
+
+.window-header {
+  background: linear-gradient(to bottom, #4400aa 0%, #290091 100%);
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.window-content {
+  padding: 10px;
+}
+
+.product {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #4400aa;
+  border-radius: 5px;
+  background: rgba(68, 0, 170, 0.1);
+}
+
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to bottom, #4400aa 0%, #290091 100%);
+  color: #fff;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.start-button {
+  background: linear-gradient(to bottom, #6600ff 0%, #4400aa 100%);
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.clock {
+  padding: 5px 10px;
+}
+
+@keyframes blink {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+.console-text {
+  color: #1e006c;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #1e006c;
+  margin-top: 10px;
+}
+
+.progress {
+  width: 0%;
+  height: 100%;
+  background-color: #290091;
+  transition: width 0.25s ease-in-out;
+}
+
+button {
+  background: linear-gradient(to bottom, #6600ff 0%, #4400aa 100%);
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+button:hover {
+  background: linear-gradient(to bottom, #7700ff 0%, #5500bb 100%);
+}
+
+.price {
+  color: white;
+}
+
+.shop-title {
+  color: #a385ff;
+  text-shadow: 0 0 10px #a385ff, 0 0 20px #a385ff, 0 0 30px #a385ff;
+}
+
+.no-glow {
+  color: #290091;
+  text-shadow: none;
+}
+
+</style>
+</head>
+<body>
+<div id="boot-sequence">
+  <div id="main-text"></div>
+  <div class="progress-bar"><div class="progress" id="progress"></div></div>
+  <div id="boot-text"></div>
+</div>
+
+<div id="main-content">
+  <div class="window">
+    <div class="window-header">
+      <span>Bl4CKSTAR ★ SHOP</span>
+      <span>_ ☐ X</span>
+    </div>
+    <div class="window-content">
+      <h2><span class="no-glow">Welcome to </span><span class="shop-title">Bl4CKSTAR ★ SHOP</span></h2>
+      <p>Elevating your Fashion to Cosmic Heights</p>
+    </div>
+  </div>
+
+  <div class="window">
+    <div class="window-header">
+      <span>Products</span>
+      <span>_ ☐ X</span>
+    </div>
+    <div class="window-content">
+      <div class="product">
+        <h3>CryptoHoodie</h3>
+        <p class="price">Price: 0.05 BTC</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <h3>HackerJeans</h3>
+        <p class="price">Price: 0.03 BTC</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <h3>MatrixBoots</h3>
+        <p class="price">Price: 0.04 BTC</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <h3>BinaryScarf</h3>
+        <p class="price">Price: 0.02 BTC</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="taskbar">
+    <button class="start-button">START</button>
+    <div class="clock" id="clock"></div>
+  </div>
+</div>
+
+<script>
+const mainText = [
+  "Initializing Bl4CKSTAR systems...",
+  "Decrypting Shadow Market...",
+  "Accessing Quantum Inventory...",
+  "Bypassing Neural Firewalls...",
+  "Syncing with Dark Web Nodes...",
+  "Bl4CKSTAR SHOP Loaded."
+];
+
+function getRandomHex(length) {
+  return Array.from({length}, () => Math.floor(Math.random() * 16).toString(16)).join('');
+}
+
+function typeWriter(textElement, text, i, fnCallback) {
+  if (i < text.length) {
+    textElement.innerHTML = text.substring(0, i+1) + '<span class="blink">_</span>';
+    setTimeout(function() {
+      typeWriter(textElement, text, i + 1, fnCallback)
+    }, 15); // Reduced from 25 to 15 (40% faster)
+  } else if (typeof fnCallback == 'function') {
+    setTimeout(fnCallback, 102); // Reduced from 170 to 102 (40% faster)
+  }
+}
+
+function addConsoleText() {
+  let consoleText = `<span class="console-text">[${getRandomHex(8)}] ${getRandomHex(16)}: ${getRandomHex(32)}\n</span>`;
+  document.getElementById("boot-text").innerHTML += consoleText;
+}
+
+function updateProgressBar(progress) {
+  document.getElementById("progress").style.width = `${progress}%`;
+}
+
+function startTextAnimation(i) {
+  if (i >= mainText.length) {
+    setTimeout(function() {
+      document.getElementById("boot-sequence").style.display = "none";
+      document.getElementById("main-content").style.display = "block";
+    }, 147); // Reduced from 245 to 147 (40% faster)
+    return;
+  }
+
+  let mainTextElement = document.getElementById("main-text");
+  typeWriter(mainTextElement, mainText[i], 0, function() {
+    updateProgressBar((i + 1) * (100 / mainText.length));
+    for(let j = 0; j < 5; j++) {
+      setTimeout(addConsoleText, j * 30); // Reduced from 50 to 30 (40% faster)
+    }
+    setTimeout(function() {
+      startTextAnimation(i + 1);
+    }, 294); // Reduced from 490 to 294 (40% faster)
+  });
+}
+
+startTextAnimation(0);
+
+function updateClock() {
+  const now = new Date();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  document.getElementById('clock').textContent = `${hours}:${minutes}`;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+</body></html>
